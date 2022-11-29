@@ -20,7 +20,7 @@
 
             <div class="card-footer ">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalActualizar{{$consulta->idRecuerdo}}">
                     Actualizar
                 </button>
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal"
