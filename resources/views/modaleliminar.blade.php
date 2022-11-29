@@ -15,7 +15,7 @@
        <h6>Recuerdo:</h6>{{$consulta->recuerdo}}
       </div>
       <div class="card-footer d-flex">
-        <a href="{{ route('recuerdo.index') }}" class="btn btn-primary">Regresar</a>
+        <a href="{{ route('recuerdo.index') }}" class="btn btn-primary">Regresar</a><br>
         <form action="{{route('recuerdo.delete',$consulta->idRecuerdo)}}" method="POST">
             @csrf
             @method('delete')

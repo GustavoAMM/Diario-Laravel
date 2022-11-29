@@ -1,9 +1,17 @@
+@include('modalactualizar')
+@include('modaleliminar')
 @extends('plantilla')
 @section('contenido')
-    @include('modalactualizar')
-    @include('modaleliminar')
+
 
     <br>
+    @if (session()->has('actualizado'))
+        {!! "<script>Swal.fire('Correcto','Recuerdo actualizado','success')</script>" !!}
+    @endif
+
+    @if (session()->has('Eliminacion'))
+        {!! "<script>Swal.fire('Correcto', 'Recuerdo eliminado','success')</script>" !!}
+    @endif
 
     @foreach ($resultRec as $consulta)
         <div class="container col-md-6">
@@ -20,7 +28,8 @@
 
             <div class="card-footer ">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalActualizar{{$consulta->idRecuerdo}}">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#ModalActualizar{{ $consulta->idRecuerdo }}">
                     Actualizar
                 </button>
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal"
