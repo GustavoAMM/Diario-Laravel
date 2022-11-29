@@ -15,11 +15,13 @@
        <h6>Recuerdo:</h6>{{$consulta->recuerdo}}
       </div>
       <div class="card-footer d-flex">
-        <a href="{{ route('recuerdo.index') }}" class="btn btn-primary">Regresar</a><br>
+        <form action="{{ route('recuerdo.index') }}">
+          <button type="submit" class="btn btn-secondary">cancelar</button>
+        </form>
         <form action="{{route('recuerdo.delete',$consulta->idRecuerdo)}}" method="POST">
             @csrf
             @method('delete')
-            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <button type="submit" class="mx-3 btn btn-danger">Eliminar</button>
         </form><br>
     </div>
     </div>
