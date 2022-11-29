@@ -16,13 +16,10 @@ Route::get('recuerdo/{id}/edit', [ControladorBD::class,'edit'])->name('recuerdo.
 //eliminar
 Route::delete('recuerdo/{id}', [ControladorBD::class,'destroy'])->name('recuerdo.delete');
 
-
 //rutas agrupadas
 route::controller(ControladorVista::class)->group(
     function (){
-        Route::get('/','showHome')->name('casa');
-        //Route::get('ingresar','showIngresar')->name('in');
-        //Route::get('recuerdos','showRecuerdos')->name('rec');
+        Route::get('/','showHome')->name('home');
     }
 );
 
